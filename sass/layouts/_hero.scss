@@ -10,12 +10,24 @@
   & img {
     position: absolute;
     right: 130px;
-    top: 90px;
+    top: 20px;
   }
   @media screen and (min-width: 770px) {
     padding-top: 116px;
     padding-left: 70px;
     padding-bottom: 163px;
+    & img {
+      right: -150px;
+      top: 90px;
+      width: 465px;
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    & img {
+      right: -10px;
+      top: 90px;
+      width: 705px;
+    }
   }
 }
 
@@ -37,6 +49,7 @@
     font-size: 80px;
     letter-spacing: 0.07px;
     width: 720px;
+    padding-top: 150px;
   }
 }
 

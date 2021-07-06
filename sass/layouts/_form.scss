@@ -39,7 +39,7 @@
 
 .from__subtitle {
   font-family: "PT Mono", monospace;
-  color: rgba(255, 255, 255, 80%);
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 25px;
   @media screen and (min-width: 770px) {
     margin-bottom: 50px;
@@ -89,5 +89,18 @@
       display: flex;
       justify-content: space-between;
     }
+  }
+}
+.checkbox__label {
+  display: flex;
+  & span {
+    margin-left: 17px;
+  }
+}
+@media screen and (min-width: 770px) {
+  .form__bottom {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
   }
 }
