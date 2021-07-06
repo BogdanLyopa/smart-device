@@ -1,0 +1,23 @@
+// $image: "image1", "iamge2";
+// @each $imageName in $image {
+//   .icon-#{$imageName} {
+//     background-color: #fff;
+//   }
+// }
+@import "./utils/normalize";
+@import "./base/common";
+@import "./layouts/page-header";
+@import "./layouts/hero";
+@import "./layouts/container";
+@import "./layouts/cards-section";
+@import "./layouts/about";
+@import "./layouts/services";
+@import "./layouts/form";
+@import "./layouts/footer";
+
+
+
+
+
+
+
