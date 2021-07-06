@@ -46,7 +46,7 @@
                 </a>
               </li>
             </ul>
-            <button type="button" class="header__button">
+            <button type="button" class="header__button" >
               Заказать звонок
             </button>
           </div>
@@ -62,7 +62,7 @@
         <p class="paragraph">
           производство и монтаж, поставка комплектующих, блоков и модулей
         </p>
-        <button type="button" class="button">Бесплатная консультация</button>
+        <button type="button" class="button" data-modal-open>Бесплатная консультация</button>
         </div>
       </section>
       <section class="container cards">
@@ -285,5 +285,9 @@
         <span class="footer__span">Developed by wow studio </span>
       </div>
     </footer>
+    <div class='backdrop is-hidden'>
+      <div class="modal"></div>
+    </div>
+    <script src="./index.js"></script>
   </body>
 </html>
