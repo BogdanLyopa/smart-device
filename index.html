@@ -197,7 +197,8 @@
               Задать вопрос
             </button>
             <label class="checkbox__label" for="agree">
-              <input type="checkbox" name="" id="agree" /><span
+              <input type="checkbox" name="" id="agree" class=" hidden checkbox" />
+              <span class="checkbox-icon"></span><span
                 class="from__subtitle"
                 >Я согласен на обработку персональных данных</span
               >
@@ -286,7 +287,41 @@
       </div>
     </footer>
     <div class='backdrop is-hidden'>
-      <div class="modal"></div>
+      <div class="modal">
+      <form action="">
+       <h2 class="form__title">Закажите звонок</h2>
+         <button class="close-button" type="button">
+          
+         </button>
+          <p class="from__subtitle">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+           <input class="input" type="text" placeholder="Имя" />
+            <input
+              class="input"
+              type="tel"
+              name="tel"
+              id=""
+              placeholder="Телефон"
+            />
+          <textarea
+            class="input"
+            name=""
+            id=""
+            cols="30"
+            rows="4"
+            placeholder="Ваш вопрос"
+          ></textarea>
+            <button type="submit" class="button form__button">
+Отправить            </button>
+  <label class="checkbox__label" for="modal-agree">
+              <input type="checkbox" name="" id="modal-agree" class=" hidden checkbox" />
+              <span class="checkbox-icon"></span><span
+                class="from__subtitle"
+                >Я согласен на обработку персональных данных</span
+              >
+            </label>
+          </div>
+      </form>
+      </div>
     </div>
     <script src="./index.js"></script>
   </body>
