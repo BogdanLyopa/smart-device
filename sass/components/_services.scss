@@ -118,8 +118,6 @@
 }
 
 .services__list {
-  list-style: none;
-
   @include desktop {
     display: flex;
   }

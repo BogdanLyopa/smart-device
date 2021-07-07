@@ -558,10 +558,6 @@ button {
   }
 }
 
-.cards__list {
-  list-style: none;
-}
-
 @media (min-width: 770px) {
   .cards__list {
     display: flex;
@@ -810,10 +806,6 @@ button {
   }
 }
 
-.services__list {
-  list-style: none;
-}
-
 @media (min-width: 1400px) {
   .services__list {
     display: flex;
@@ -838,9 +830,11 @@ button {
   .form .container {
     width: 1170px;
     display: flex;
+    align-items: center;
   }
   .form img {
     display: block;
+    height: 288px;
   }
   .form form {
     margin-left: 115px;
@@ -933,6 +927,12 @@ button {
   }
 }
 
+@media (min-width: 1400px) {
+  .form__bottom {
+    margin-bottom: 0;
+  }
+}
+
 .hidden {
   position: absolute;
   width: 1px;
@@ -997,7 +997,6 @@ button {
 
 .social__list {
   display: flex;
-  list-style: none;
   justify-content: center;
 }
 
@@ -1086,7 +1085,6 @@ button {
   .footer__list {
     display: block;
     text-decoration: none;
-    list-style: none;
     font-family: "PT Mono", monospace;
   }
   .footer__item {
@@ -1122,10 +1120,6 @@ button {
   color: rgba(27, 45, 55, 0.5);
   line-height: 25px;
   font-size: 15px;
-}
-
-.address__list {
-  list-style: none;
 }
 
 .address a {

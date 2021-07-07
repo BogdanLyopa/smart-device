@@ -14,10 +14,12 @@
     & .container {
       width: 1170px;
       display: flex;
+      align-items: center;
     }
 
     & img {
       display: block;
+      height: 288px;
     }
 
     & form {
@@ -94,11 +96,14 @@
     margin-left: 17px;
   }
 }
-@include tablet {
-  .form__bottom {
+.form__bottom {
+  @include tablet {
     display: flex;
     align-items: center;
     margin-bottom: 50px;
+  }
+  @include desktop {
+    margin-bottom: 0;
   }
 }
 

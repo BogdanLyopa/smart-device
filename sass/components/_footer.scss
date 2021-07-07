@@ -30,7 +30,6 @@
 
 .social__list {
   display: flex;
-  list-style: none;
   justify-content: center;
 
   @include desktop {
@@ -116,7 +115,6 @@
   .footer__list {
     display: block;
     text-decoration: none;
-    list-style: none;
     font-family: "PT Mono", monospace;
   }
 
@@ -155,9 +153,7 @@
   font-size: 15px;
 }
 
-.address__list {
-  list-style: none;
-}
+
 
 .address a {
   color: inherit;
