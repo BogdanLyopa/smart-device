@@ -1,9 +1,9 @@
-@media screen and (min-width: 1400px) {
+@include desktop {
   .footer {
     padding-top: 65px;
   }
 }
-@media screen and (min-width: 770px) {
+@include tablet {
   .footer__lists {
     display: flex;
     justify-content: space-between;
@@ -15,15 +15,16 @@
   padding-top: 46px;
   padding-bottom: 54px;
 
-  @media screen and (min-width: 770px) {
+  @include tablet {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid $border-color;
   }
 
-  @media screen and (min-width: 1400px) {
+  @include desktop {
     display: block;
+    padding-top: 0;
   }
 }
 
@@ -32,7 +33,7 @@
   list-style: none;
   justify-content: center;
 
-  @media screen and (min-width: 1400px) {
+  @include desktop {
     justify-content: flex-start;
   }
 }
@@ -55,7 +56,7 @@
   margin-top: 26px;
   margin-bottom: 31px;
 
-  @media screen and (min-width: 1400px) {
+  @include desktop {
     opacity: 0;
     margin-top: 0;
   }
@@ -89,28 +90,30 @@
   padding: 29px 15px;
 }
 
-@media screen and (min-width: 770px) {
+@include tablet {
   .footer__mid {
     display: flex;
     justify-content: space-between;
   }
+
   .footer__section {
     border: none;
   }
 }
 
-@media screen and (min-width: 1400px) {
+@include desktop {
   .footer__mid {
     border: none;
     margin-right: 140px;
   }
 }
-.footer_list {
+
+.footer__list {
   display: none;
 }
 
-@media screen and (min-width: 770px) {
-  .footer_list {
+@include tablet {
+  .footer__list {
     display: block;
     text-decoration: none;
     list-style: none;
@@ -139,7 +142,7 @@
   line-height: 16px;
   text-transform: uppercase;
 
-  @media screen and (min-width: 770px) {
+  @include tablet {
     margin-bottom: 30px;
   }
 }
@@ -163,7 +166,7 @@
   margin-top: 36px;
   margin-bottom: 0;
 
-  @media screen and (min-width: 770px) {
+  @include tablet {
     margin: 0;
   }
 }
@@ -180,13 +183,13 @@
 .footer__botton {
   text-align: center;
 
-  @media screen and (min-width: 770px) {
+  @include tablet {
     display: flex;
     justify-content: space-between;
   }
 }
 
-@media screen and (min-width: 1400px) {
+@include desktop {
   .footer__main {
     display: flex;
     border-bottom: 1px solid $border-color;
@@ -196,7 +199,7 @@
 .footer__link--dekstop {
   display: none;
 
-  @media screen and (min-width: 1400px) {
+  @include desktop {
     display: inline;
   }
 }
@@ -213,7 +216,7 @@
   height: 1px;
   background-color: $line-color;
 
-  @media screen and (min-width: 770px) {
+  @include tablet {
     display: none;
   }
 }
@@ -228,7 +231,7 @@
   background-size: 100% 1px, 1px 100%;
   background-repeat: no-repeat;
 
-  @media screen and (min-width: 770px) {
+  @include tablet {
     display: none;
   }
 }

@@ -3,7 +3,7 @@
   padding-top: 53px;
   padding-bottom: 64px;
 
-  @media screen and (min-width: 1400px) {
+  @include desktop {
     & .container {
       width: 1170px;
     }
@@ -18,7 +18,7 @@
   color: white;
   margin-bottom: 37px;
 
-  @media screen and (min-width: 770px) {
+  @include tablet {
     font-size: 32px;
     line-height: 45px;
   }
@@ -44,7 +44,7 @@
   background-image: url(../images/image-3.jpg);
 }
 
-@media screen and (min-width: 770px) {
+@include tablet {
   .image {
     width: 100%;
   }
@@ -59,7 +59,7 @@
   }
 }
 
-@media screen and (min-width: 1400px) {
+@include desktop {
   .image {
     width: 360px;
     height: 620px;
@@ -95,7 +95,7 @@
     padding: 28px;
   }
 
-  @media screen and (min-width: 1400px) {
+  @include desktop {
     margin-bottom: 0;
     margin-right: 30px;
   }
@@ -110,7 +110,7 @@
   font-weight: 400;
   font-size: 20px;
 
-  @media screen and (min-width: 770px) {
+  @include tablet {
     width: 170px;
     top: 60px;
     left: 40px;
@@ -120,7 +120,7 @@
 .services__list {
   list-style: none;
 
-  @media screen and (min-width: 1400px) {
+  @include desktop {
     display: flex;
   }
 }

@@ -2,7 +2,7 @@
   padding-top: 37px;
   padding-bottom: 60px;
 
-  @media screen and (min-width: 1400px) {
+  @include desktop {
     padding-bottom: 110px;
 
     & .container {
@@ -13,7 +13,7 @@
 .cards__list {
   list-style: none;
 
-  @media screen and (min-width: 770px) {
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
   }
@@ -47,7 +47,7 @@
     fill: white;
   }
 
-  @media screen and (min-width: 770px) {
+  @include tablet {
     width: calc((100% - 60px) / 2);
     margin-right: 30px;
 
@@ -59,7 +59,7 @@
       margin-bottom: 0;
     }
   }
-  @media screen and (min-width: 1400px) {
+  @include desktop {
     padding: 40px 42px 49px 44px;
   }
 }

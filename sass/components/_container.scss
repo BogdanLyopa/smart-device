@@ -5,11 +5,11 @@
   margin-right: auto;
   margin-left: auto;
 
-  @media screen and (min-width: 770px) {
+  @include tablet {
     width: 770px;
   }
 
-  @media screen and (min-width: 1400px) {
+  @include desktop {
     width: 1450px;
   }
 }

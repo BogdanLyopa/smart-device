@@ -5,7 +5,7 @@
     display: none;
   }
 
-  @media screen and (min-width: 770px) {
+  @include tablet {
     & .container {
       display: flex;
     }
@@ -14,7 +14,7 @@
       display: block;
     }
   }
-  @media screen and (min-width: 1400px) {
+  @include desktop {
     & .container {
       width: 1170px;
     }

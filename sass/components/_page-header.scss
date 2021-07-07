@@ -6,7 +6,7 @@
   display: none;
   color: white;
 
-  @media screen and (min-width: 770px) {
+  @include tablet {
     display: block;
     margin-left: 16px;
 
@@ -24,7 +24,7 @@
   display: none;
 }
 
-@media screen and (min-width: 1400px) {
+@include desktop {
   .email {
     display: inline;
     font-family: "PT Mono", monospace;
@@ -55,7 +55,7 @@
 .header__button {
   display: none;
 
-  @media screen and (min-width: 1400px) {
+  @include desktop {
     text-transform: uppercase;
     display: block;
     padding: 15px 25px;
