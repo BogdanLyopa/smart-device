@@ -1,44 +1,60 @@
 .cards {
   padding-top: 37px;
   padding-bottom: 60px;
+
   @media screen and (min-width: 1400px) {
-    width: 1170px;
     padding-bottom: 110px;
+
+    & .container {
+      width: 1170px;
+    }
   }
 }
 .cards__list {
   list-style: none;
+
   @media screen and (min-width: 770px) {
     display: flex;
     flex-wrap: wrap;
   }
 }
 
-.card {
+.cards__item {
   width: 100%;
   padding: 25px 15px 38px 27px;
   margin-bottom: 20px;
   border: 1px solid #ebebeb;
-  border-left: 2px solid #00b2ff;
+  border-left: 2px solid $accent-color;
   cursor: pointer;
-  &:hover {
-    background-color: #00b2ff;
+
+  & svg {
+    fill: $accent-color;
   }
+
+  &:hover {
+    background-color: $accent-color;
+  }
+
   &:hover .card__title {
     color: white;
   }
+
   &:hover .card__paragraph {
     color: white;
   }
-  &:hover {
+
+  &:hover svg {
     fill: white;
   }
+
   @media screen and (min-width: 770px) {
     width: calc((100% - 60px) / 2);
     margin-right: 30px;
+
     &:last-child {
       margin-right: 0;
     }
+
     &:nth-last-child(-n + 2) {
       margin-bottom: 0;
     }
@@ -48,24 +64,17 @@
   }
 }
 
-.card_img {
-  fill: white;
-}
-.card:hover .card_img {
-  fill: white;
-}
-
 .card__title {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
   font-size: 20px;
-  color: #00b2ff;
+  color: $accent-color;
   margin-top: 14px;
   margin-bottom: 16px;
 }
 
 .card__paragraph {
   font-family: "PT Mono", monospace;
-  color: #666666;
+  color: $text-color;
   font-size: 16px;
 }

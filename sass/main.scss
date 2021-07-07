@@ -1,25 +1,12 @@
-// $image: "image1", "iamge2";
-// @each $imageName in $image {
-//   .icon-#{$imageName} {
-//     background-color: #fff;
-//   }
-// }
 @import "./utils/normalize";
+@import "./utils/variables";
 @import "./base/common";
-@import "./layouts/page-header";
-@import "./layouts/hero";
-@import "./layouts/container";
-@import "./layouts/cards-section";
-@import "./layouts/about";
-@import "./layouts/services";
-@import "./layouts/form";
-@import "./layouts/footer";
-@import "./layouts/backdrop";
-
-
-
-
-
-
-
-
+@import "./components/page-header";
+@import "./components/hero";
+@import "./components/container";
+@import "./components/cards";
+@import "./components/about";
+@import "./components/services";
+@import "./components/form";
+@import "./components/footer";
+@import "./components/backdrop";

@@ -1,11 +1,10 @@
 @media screen and (min-width: 1400px) {
-  footer {
-    // display: flex;
+  .footer {
     padding-top: 65px;
   }
 }
 @media screen and (min-width: 770px) {
-  .f {
+  .footer__lists {
     display: flex;
     justify-content: space-between;
   }
@@ -15,12 +14,14 @@
   text-align: center;
   padding-top: 46px;
   padding-bottom: 54px;
+
   @media screen and (min-width: 770px) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(98, 105, 98, 0.2);
+    border-bottom: 1px solid $border-color;
   }
+
   @media screen and (min-width: 1400px) {
     display: block;
   }
@@ -38,30 +39,33 @@
 
 .social__item {
   margin-right: 16px;
-}
-.social__item:last-child {
-  margin-right: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .footer__paragraph {
   font-family: "PT Mono", monospace;
   font-size: 13px;
-  color: #1b2d37;
+  color: $text-color;
   line-height: 24px;
-  letter-spacing: 0.04;
+  letter-spacing: 0.04em;
   opacity: 50%;
+  margin-top: 26px;
+  margin-bottom: 31px;
+
+  @media screen and (min-width: 1400px) {
+    opacity: 0;
+    margin-top: 0;
+  }
 }
 
 .footer__title {
   font-weight: 700;
   font-size: 25px;
-  color: #203c42;
+  color: $logo-color;
   margin: 0;
-}
-
-small {
-  font-style: 12px;
-  color: #788891;
 }
 
 .footer__flex {
@@ -70,26 +74,31 @@ small {
   align-items: center;
 }
 
-.left {
+.logo--footer {
   text-align: left;
   margin-left: 16px;
+
+  & small {
+    font-size: 12px;
+    color: #788891;
+  }
 }
 
 .footer__section {
-  border-top: 1px solid rgba(98, 105, 98, 0.2);
+  border-top: 1px solid $border-color;
   padding: 29px 15px;
 }
+
 @media screen and (min-width: 770px) {
   .footer__mid {
     display: flex;
     justify-content: space-between;
-    // border-top: 1px solid rgba(98, 105, 98, 20%);
-    // border-bottom: 1px solid rgba(98, 105, 98, 20%);
   }
   .footer__section {
     border: none;
   }
 }
+
 @media screen and (min-width: 1400px) {
   .footer__mid {
     border: none;
@@ -99,6 +108,7 @@ small {
 .footer_list {
   display: none;
 }
+
 @media screen and (min-width: 770px) {
   .footer_list {
     display: block;
@@ -106,56 +116,70 @@ small {
     list-style: none;
     font-family: "PT Mono", monospace;
   }
+
   .footer__item {
-    color: rgba(27, 45, 55, 0.5);
+    color: $text-opacity;
     margin-bottom: 10px;
   }
+
   .footer__item :last-child {
     margin: 0;
   }
+
   .footer__item a {
     color: inherit;
   }
 }
+
 .footer__subtitle {
   font-size: 16px;
   font-weight: 400;
-  color: #1b2d37;
+  color: $text-color;
   letter-spacing: 0.05px;
   line-height: 16px;
   text-transform: uppercase;
+
   @media screen and (min-width: 770px) {
     margin-bottom: 30px;
   }
 }
 
-address {
+.address {
   font-family: "PT Mono", monospace;
-
   font-style: normal;
-  color: rgba(27, 45, 55, 0.5);
+  color: $text-opacity;
   line-height: 25px;
   font-size: 15px;
 }
 
-.numbers__list {
+.address__list {
   list-style: none;
 }
 
-address a {
+.address a {
   color: inherit;
 }
+.address p {
+  margin-top: 36px;
+  margin-bottom: 0;
 
-.footer__span {
+  @media screen and (min-width: 770px) {
+    margin: 0;
+  }
+}
+
+.footer__link {
   font-family: "PT Mono", monospace;
   font-weight: 400;
   text-transform: uppercase;
   line-height: 24px;
   letter-spacing: 0.04px;
-  color: rgba(27, 45, 55, 0.5);
+  color: $text-opacity;
 }
+
 .footer__botton {
   text-align: center;
+
   @media screen and (min-width: 770px) {
     display: flex;
     justify-content: space-between;
@@ -165,7 +189,46 @@ address a {
 @media screen and (min-width: 1400px) {
   .footer__main {
     display: flex;
-    border-bottom: 1px solid rgba(98, 105, 98, 0.2);
+    border-bottom: 1px solid $border-color;
     justify-content: space-between;
+  }
+}
+.footer__link--dekstop {
+  display: none;
+
+  @media screen and (min-width: 1400px) {
+    display: inline;
+  }
+}
+
+.footer__section--top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.minus {
+  right: 0;
+  width: 16px;
+  height: 1px;
+  background-color: $line-color;
+
+  @media screen and (min-width: 770px) {
+    display: none;
+  }
+}
+
+.plus {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient($line-color, $line-color),
+    linear-gradient($line-color, $line-color), #fff;
+  background-position: center;
+  background-size: 100% 1px, 1px 100%;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: 770px) {
+    display: none;
   }
 }

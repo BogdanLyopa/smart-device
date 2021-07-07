@@ -1,16 +1,23 @@
-.about__section {
+.about {
   padding-bottom: 65px;
+
   & img {
     display: none;
   }
+
   @media screen and (min-width: 770px) {
-    display: flex;
+    & .container {
+      display: flex;
+    }
+
     & img {
       display: block;
     }
   }
   @media screen and (min-width: 1400px) {
-    width: 1170px;
+    & .container {
+      width: 1170px;
+    }
   }
 }
 
@@ -22,15 +29,19 @@
 
 .button--white {
   background-color: #fff;
-  color: #00b2ff;
-  border: 1px solid #00b2ff;
+  color: $accent-color;
+  border: 1px solid $accent-color;
   width: 180px;
   margin: 0;
 }
 
-.about__section .card__paragraph {
+.about__paragraph {
+  font-family: "PT Mono", monospace;
+  color: $text-color;
+  font-size: 16px;
   margin-bottom: 50px;
-}
-.about__section .card__paragraph:last-child {
-  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 40px;
+  }
 }

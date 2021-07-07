@@ -1,14 +1,21 @@
 .header {
-  background-color: #1b2d37;
+  background-color: $background;
 }
+
 .logo__titles {
   display: none;
+  color: white;
+
   @media screen and (min-width: 770px) {
     display: block;
-    color: white;
     margin-left: 16px;
+
+    & .logo__subtitle {
+      color: #788891;
+    }
   }
 }
+
 .email {
   display: none;
 }
@@ -16,6 +23,7 @@
 .phone {
   display: none;
 }
+
 @media screen and (min-width: 1400px) {
   .email {
     display: inline;
@@ -24,6 +32,7 @@
     margin-left: 20px;
     margin-right: 88px;
   }
+
   .phone {
     display: inline;
     font-family: "PT Mono", monospace;
@@ -31,10 +40,12 @@
     margin-left: 20px;
     margin-right: 38px;
   }
+
   .nav__item a {
     display: flex;
     align-items: center;
   }
+
   .header__links {
     display: flex;
     align-items: center;
@@ -43,6 +54,7 @@
 
 .header__button {
   display: none;
+
   @media screen and (min-width: 1400px) {
     text-transform: uppercase;
     display: block;
@@ -54,18 +66,26 @@
     border-radius: 5px;
   }
 }
+
 .logo {
   display: flex;
 }
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 15px;
 }
+
+.nav__list {
+  display: flex;
+}
+
 .nav__item {
   margin-right: 24px;
-}
-.nav__item:last-child {
-  margin-right: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
