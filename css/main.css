@@ -876,7 +876,7 @@ button {
 .input {
   font-family: "PT Mono", monospace;
   width: 100%;
-  background-color: #00bfff;
+  background-color: #00b2ff;
   border: none;
   padding: 14px 17px;
   color: white;
@@ -954,7 +954,7 @@ button {
 }
 
 .checkbox:checked + .checkbox__icon {
-  background-image: url(/images/check.svg);
+  background-image: url(../images/check.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1270,7 +1270,7 @@ button {
 }
 
 .close-button {
-  background-image: url(/images/close.svg);
+  background-image: url(../images/close.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
