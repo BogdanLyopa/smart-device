@@ -19,18 +19,19 @@
 }
 
 .button--close {
-  background-image: url(../images/close.svg);
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), #fff;
   background-position: center;
+  background-size: 100% 1px, 1px 100%;
   background-repeat: no-repeat;
-  background-size: contain;
-  width: 17px;
-  height: 17px;
+  transform: rotate(45deg);
   position: absolute;
   right: 20px;
   top: 20px;
   border: none;
   background-color: transparent;
-  color: white;
   cursor: pointer;
 }
 

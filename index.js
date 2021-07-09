@@ -8,13 +8,32 @@ const refs = {
   list: document.querySelector(".footer__list"),
 };
 
-refs.openModalBtn.addEventListener("click", toggleModal);
-refs.closeModalBtn.addEventListener("click", toggleModal);
+refs.openModalBtn.addEventListener("click", onOpenModal);
+refs.closeModalBtn.addEventListener("click", onOpenModal);
+refs.modal.addEventListener("click", onOverlayClick);
 refs.showListBtn.addEventListener("click", showList);
 refs.showAddressBtn.addEventListener("click", showAddress);
 
-function toggleModal() {
+function onOpenModal() {
   refs.modal.classList.toggle("backdrop__hidden");
+  window.addEventListener("keydown", onPressEscape);
+}
+
+function onCloseModal() {
+  window.removeEventListener("keydown", onPressEscape);
+  refs.modal.classList.toggle("backdrop__hidden");
+}
+
+function onOverlayClick(event) {
+  if (event.currentTarget === event.target) {
+    onCloseModal();
+  }
+}
+
+function onPressEscape(event) {
+  if (event.code === "Escape") {
+    onCloseModal();
+  }
 }
 
 function showList() {
