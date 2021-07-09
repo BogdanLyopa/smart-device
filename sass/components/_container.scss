@@ -26,8 +26,6 @@
 }
 
 .hero .container {
-  overflow: hidden;
-
   @include tablet {
     min-width: 590px;
   }

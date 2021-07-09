@@ -1,15 +1,10 @@
 .hero {
   padding-bottom: 70px;
-  background-color: $background;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
 
   img {
     position: absolute;
-    right: -40px;
-    top: 20px;
+    right: 0px;
+    top: 100px;
   }
 
   @include tablet {
@@ -20,17 +15,18 @@
 
     img {
       right: 0px;
-      top: 50px;
+      top: 100px;
       width: 465px;
     }
   }
+
   @include desktop {
     padding-bottom: 275px;
     padding-top: 230px;
 
     img {
       right: -10px;
-      top: 150px;
+      top: 220px;
       width: 705px;
     }
   }
@@ -42,8 +38,9 @@
   color: white;
   text-transform: uppercase;
   margin-bottom: 30px;
-  padding-top: 200px;
+  padding-top: 230px;
   position: relative;
+  letter-spacing: 0.07em;
 
   @include tablet {
     font-size: 60px;
@@ -88,6 +85,7 @@
     margin-left: 80px;
     width: 680px;
     font-size: 22px;
+
     &::before {
       bottom: 35px;
       width: 66px;

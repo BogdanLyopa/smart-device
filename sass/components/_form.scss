@@ -107,6 +107,7 @@
   }
 }
 .checkbox__label {
+  cursor: pointer;
   @include tablet {
     width: calc((100% - 30px) / 2);
   }
