@@ -6,34 +6,37 @@
   background-size: cover;
   position: relative;
 
-  & img {
+  img {
     position: absolute;
-    right: 130px;
+    right: -40px;
     top: 20px;
   }
 
   @include tablet {
     padding-top: 116px;
-    padding-left: 70px;
     padding-bottom: 163px;
+    padding-left: 60px;
+    padding-right: 60px;
 
-    & img {
-      right: -150px;
-      top: 90px;
+    img {
+      right: 0px;
+      top: 50px;
       width: 465px;
     }
   }
   @include desktop {
-    & img {
+    padding-bottom: 275px;
+    padding-top: 230px;
+
+    img {
       right: -10px;
-      top: 90px;
+      top: 150px;
       width: 705px;
     }
   }
 }
 
 .hero__title {
-  font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
   font-size: 40px;
   color: white;
@@ -52,12 +55,11 @@
     font-size: 80px;
     letter-spacing: 0.07px;
     width: 720px;
-    padding-top: 150px;
   }
 }
 
 .hero__paragraph {
-  font-family: "PT Mono", monospace;
+  font-family: "PT Mono", "Arial", monospace;
   font-weight: 400;
   color: white;
   margin-left: 50px;
@@ -68,56 +70,28 @@
   margin-bottom: 42px;
 
   &::before {
+    content: "";
     display: inline-block;
     position: absolute;
     left: -48px;
-    bottom: 40px;
-    content: "";
+    bottom: 35px;
     width: 33px;
     height: 2px;
     background-color: white;
   }
 
   @include tablet {
-    &::before {
-      bottom: 30px;
-    }
+    width: 350px;
   }
 
-  @include tablet {
-    width: 350px;
+  @include desktop {
     margin-left: 80px;
-
+    width: 680px;
+    font-size: 22px;
     &::before {
+      bottom: 35px;
       width: 66px;
       left: -80px;
     }
-  }
-
-  @include desktop {
-    width: 680px;
-    font-size: 22px;
-  }
-}
-
-.button {
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: 700;
-  color: white;
-  text-transform: uppercase;
-  background-color: $accent-color;
-  padding: 17px 32px;
-  border-radius: 5px;
-  border: none;
-  width: 100%;
-
-  @include tablet {
-    width: 380px;
-    margin-left: 50px;
-  }
-
-  @include desktop {
-    width: 380px;
-    margin-left: 80px;
   }
 }

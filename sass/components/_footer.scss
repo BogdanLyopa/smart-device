@@ -1,12 +1,11 @@
-@include desktop {
-  .footer {
-    padding-top: 65px;
+.footer {
+  @include tablet {
+    .logo__title {
+      color: $logo-color;
+    }
   }
-}
-@include tablet {
-  .footer__lists {
-    display: flex;
-    justify-content: space-between;
+  @include desktop {
+    padding-top: 65px;
   }
 }
 
@@ -18,12 +17,17 @@
   @include tablet {
     display: flex;
     align-items: center;
+    text-align: left;
+
     justify-content: space-between;
     border-bottom: 1px solid $border-color;
+    padding-top: 20px;
+    padding-bottom: 24px;
   }
 
   @include desktop {
     display: block;
+    border: none;
     padding-top: 0;
   }
 }
@@ -46,8 +50,9 @@
 }
 
 .footer__paragraph {
-  font-family: "PT Mono", monospace;
+  font-family: "PT Mono", "Arial", monospace;
   font-size: 13px;
+  text-transform: uppercase;
   color: $text-color;
   line-height: 24px;
   letter-spacing: 0.04em;
@@ -55,6 +60,9 @@
   margin-top: 26px;
   margin-bottom: 31px;
 
+  @include tablet {
+    margin: 0;
+  }
   @include desktop {
     opacity: 0;
     margin-top: 0;
@@ -74,17 +82,7 @@
   align-items: center;
 }
 
-.logo--footer {
-  text-align: left;
-  margin-left: 16px;
-
-  & small {
-    font-size: 12px;
-    color: #788891;
-  }
-}
-
-.footer__section {
+.footer__block {
   border-top: 1px solid $border-color;
   padding: 29px 15px;
 }
@@ -95,7 +93,7 @@
     justify-content: space-between;
   }
 
-  .footer__section {
+  .footer__block {
     border: none;
   }
 }
@@ -108,30 +106,44 @@
 }
 
 .footer__list {
-  display: none;
+  margin-top: 36px;
+
+  @include tablet {
+    margin: 0;
+  }
 }
 
-@include tablet {
-  .footer__list {
-    display: block;
-    text-decoration: none;
+.footer__lists {
+  display: block;
+  margin-top: 10px;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $border-color;
     font-family: "PT Mono", monospace;
   }
 
-  .footer__item {
-    color: $text-opacity;
-    margin-bottom: 10px;
-  }
-
-  .footer__item :last-child {
-    margin: 0;
-  }
-
-  .footer__item a {
-    color: inherit;
+  @include desktop {
+    border: none;
+    .footer__block {
+      padding-top: 0;
+    }
   }
 }
 
+.footer__item {
+  color: $text-opacity;
+  margin-bottom: 10px;
+}
+
+.footer__item :last-child {
+  margin: 0;
+}
+
+.footer__item a {
+  color: inherit;
+}
 .footer__subtitle {
   font-size: 16px;
   font-weight: 400;
@@ -145,7 +157,7 @@
   }
 }
 
-.address {
+.footer__address {
   font-family: "PT Mono", monospace;
   font-style: normal;
   color: $text-opacity;
@@ -153,12 +165,10 @@
   font-size: 15px;
 }
 
-
-
-.address a {
+.footer__address a {
   color: inherit;
 }
-.address p {
+.footer__address p {
   margin-top: 36px;
   margin-bottom: 0;
 
@@ -200,34 +210,8 @@
   }
 }
 
-.footer__section--top {
+.footer__box {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.minus {
-  right: 0;
-  width: 16px;
-  height: 1px;
-  background-color: $line-color;
-
-  @include tablet {
-    display: none;
-  }
-}
-
-.plus {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background: linear-gradient($line-color, $line-color),
-    linear-gradient($line-color, $line-color), #fff;
-  background-position: center;
-  background-size: 100% 1px, 1px 100%;
-  background-repeat: no-repeat;
-
-  @include tablet {
-    display: none;
-  }
 }

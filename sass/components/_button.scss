@@ -1,0 +1,72 @@
+.button {
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  background-color: $accent-color;
+  padding: 17px 32px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+
+  @include tablet {
+    width: 380px;
+    margin-left: 50px;
+  }
+
+  @include desktop {
+    margin-left: 80px;
+  }
+}
+
+.button--close {
+  background-image: url(../images/close.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.button--white {
+  background-color: #fff;
+  color: $accent-color;
+  border: 1px solid $accent-color;
+  font-size: 14px;
+  width: 180px;
+  margin: 0;
+}
+
+.button--minus {
+  right: 0;
+  width: 16px;
+  height: 1px;
+  background-color: $line-color;
+  border: none;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.button--plus {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient($line-color, $line-color),
+    linear-gradient($line-color, $line-color), #fff;
+  background-position: center;
+  background-size: 100% 1px, 1px 100%;
+  background-repeat: no-repeat;
+  border: none;
+
+  @include tablet {
+    display: none;
+  }
+}

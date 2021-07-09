@@ -1,15 +1,50 @@
 .container {
-  width: 320px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
+  max-width: 1250px;
+
+  @include mobile {
+    min-width: 320px;
+  }
 
   @include tablet {
-    width: 770px;
+    min-width: 750px;
   }
 
   @include desktop {
-    width: 1450px;
+    max-width: 1170px;
+  }
+}
+
+.form .container {
+  @include tablet {
+    min-width: 590px;
+  }
+}
+
+.hero .container {
+  overflow: hidden;
+
+  @include tablet {
+    min-width: 590px;
+  }
+
+  @include desktop {
+    max-width: 1411px;
+  }
+}
+
+.header .container {
+  @include desktop {
+    max-width: 1411px;
+  }
+}
+
+.footer .container {
+  @include desktop {
+    max-width: 1411px;
   }
 }

@@ -2,6 +2,8 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./base/common";
+@import "./components/button";
+@import "./components/logo";
 @import "./components/page-header";
 @import "./components/hero";
 @import "./components/container";
@@ -11,3 +13,4 @@
 @import "./components/form";
 @import "./components/footer";
 @import "./components/backdrop";
+@import "./components/modal";

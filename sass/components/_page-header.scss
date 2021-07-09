@@ -2,20 +2,6 @@
   background-color: $background;
 }
 
-.logo__titles {
-  display: none;
-  color: white;
-
-  @include tablet {
-    display: block;
-    margin-left: 16px;
-
-    & .logo__subtitle {
-      color: #788891;
-    }
-  }
-}
-
 .email {
   display: none;
 }
@@ -27,7 +13,7 @@
 @include desktop {
   .email {
     display: inline;
-    font-family: "PT Mono", monospace;
+    font-family: "PT Mono", "Arial", monospace;
     color: white;
     margin-left: 20px;
     margin-right: 88px;
@@ -35,7 +21,7 @@
 
   .phone {
     display: inline;
-    font-family: "PT Mono", monospace;
+    font-family: "PT Mono", "Arial", monospace;
     color: white;
     margin-left: 20px;
     margin-right: 38px;
@@ -65,10 +51,6 @@
     color: white;
     border-radius: 5px;
   }
-}
-
-.logo {
-  display: flex;
 }
 
 .nav {
