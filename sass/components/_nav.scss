@@ -1,0 +1,49 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 24px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include desktop {
+      a {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  &__email {
+    display: none;
+
+    @include desktop {
+      display: inline;
+      font-family: "PT Mono", "Arial", monospace;
+      color: white;
+      margin-left: 20px;
+      margin-right: 88px;
+    }
+  }
+
+  &__phone {
+    display: none;
+
+    @include desktop {
+      display: inline;
+      font-family: "PT Mono", "Arial", monospace;
+      color: white;
+      margin-left: 20px;
+      margin-right: 38px;
+    }
+  }
+}
