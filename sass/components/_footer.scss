@@ -1,10 +1,4 @@
 .footer {
-  @include tablet {
-    .logo__title {
-      color: $logo-color;
-    }
-  }
-  
   @include desktop {
     padding-top: 65px;
   }
@@ -19,7 +13,6 @@
     display: flex;
     align-items: center;
     text-align: left;
-
     justify-content: space-between;
     border-bottom: 1px solid $border-color;
     padding-top: 20px;
@@ -30,23 +23,6 @@
     display: block;
     border: none;
     padding-top: 0;
-  }
-}
-
-.social__list {
-  display: flex;
-  justify-content: center;
-
-  @include desktop {
-    justify-content: flex-start;
-  }
-}
-
-.social__item {
-  margin-right: 16px;
-
-  &:last-child {
-    margin-right: 0;
   }
 }
 
@@ -123,11 +99,12 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid $border-color;
-    font-family: "PT Mono", monospace;
+    font-family: "PT Mono", "Arial", monospace;
   }
 
   @include desktop {
     border: none;
+
     .footer__block {
       padding-top: 0;
     }
@@ -137,15 +114,16 @@
 .footer__item {
   color: $text-opacity;
   margin-bottom: 10px;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+  }
 }
 
-.footer__item :last-child {
-  margin: 0;
-}
-
-.footer__item a {
-  color: inherit;
-}
 .footer__subtitle {
   font-size: 16px;
   font-weight: 400;
@@ -160,7 +138,7 @@
 }
 
 .footer__address {
-  font-family: "PT Mono", monospace;
+  font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   color: $text-opacity;
   line-height: 25px;
@@ -170,6 +148,7 @@
 .footer__address a {
   color: inherit;
 }
+
 .footer__address p {
   margin-top: 36px;
   margin-bottom: 0;
@@ -180,7 +159,7 @@
 }
 
 .footer__link {
-  font-family: "PT Mono", monospace;
+  font-family: "PT Mono", "Arial", monospace;
   font-weight: 400;
   text-transform: uppercase;
   line-height: 24px;
@@ -188,7 +167,7 @@
   color: $text-opacity;
 }
 
-.footer__botton {
+.footer__bottom {
   text-align: center;
   padding-left: 0;
   padding-right: 0;
@@ -207,6 +186,7 @@
     justify-content: space-between;
   }
 }
+
 .footer__link--dekstop {
   display: none;
 
@@ -219,4 +199,32 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.footer__hide {
+  right: 0;
+  width: 16px;
+  height: 1px;
+  background-color: $line-color;
+  border: none;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.footer__show {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient($line-color, $line-color),
+    linear-gradient($line-color, $line-color), #fff;
+  background-position: center;
+  background-size: 100% 1px, 1px 100%;
+  background-repeat: no-repeat;
+  border: none;
+
+  @include tablet {
+    display: none;
+  }
 }

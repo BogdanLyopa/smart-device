@@ -1,0 +1,16 @@
+.social {
+  display: flex;
+  justify-content: center;
+
+  @include desktop {
+    justify-content: flex-start;
+  }
+}
+
+.social__item {
+  margin-right: 16px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

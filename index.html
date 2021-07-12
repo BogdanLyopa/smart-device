@@ -14,7 +14,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="container head">
+      <div class="container header__container">
         <nav class="nav">
           <a href="/" class="logo">
             <svg width="38" height="38">
@@ -51,7 +51,7 @@
         </nav>
       </div>
       <section class="hero">
-        <div class="container">
+        <div class="container hero__container">
           <img src="images/plats.png" alt="plats" width="300" height="220" />
           <h1 class="hero__title">Печатные платы</h1>
           <p class="hero__paragraph">
@@ -63,9 +63,9 @@
     </header>
     <main>
       <section class="cards">
-        <div class="container">
+        <div class="container cards__container">
           <ul class="cards__list">
-            <li class="cards__item">
+            <li class="card">
               <svg width="30" height="36">
                 <use href="images/sprite.svg#icon-stopwatch"></use>
               </svg>
@@ -76,7 +76,7 @@
                 комплектующих в самые короткие сроки
               </p>
             </li>
-            <li class="cards__item">
+            <li class="card">
               <svg width="31" height="32">
                 <use href="images/sprite.svg#icon-hired"></use>
               </svg>
@@ -87,7 +87,7 @@
                 компаниями обеспичивает хорошее качество нашей продукции.
               </p>
             </li>
-            <li class="cards__item">
+            <li class="card">
               <svg width="30" height="26">
                 <use href="images/sprite.svg#icon-detective"></use>
               </svg>
@@ -96,7 +96,7 @@
                 По желанию клиента мы обеспечиваем полную конфеденциальность.
               </p>
             </li>
-            <li class="cards__item">
+            <li class="card">
               <svg width="32" height="32">
                 <use href="images/sprite.svg#icon-tag"></use>
               </svg>
@@ -110,7 +110,7 @@
         </div>
       </section>
       <section class="about">
-        <div class="container">
+        <div class="container about__container">
           <img src="images/year.jpg" alt="2005year" width="250" height="360" />
           <div>
             <h2 class="about__title">О компании</h2>
@@ -132,37 +132,37 @@
         </div>
       </section>
       <section class="services">
-        <div class="container">
+        <div class="container services__container">
           <h2 class="services__title">
             Service Device предлагает следующие товары и услуги
           </h2>
           <ul class="services__list">
-            <li class="services__item image image--1">
+            <li class="services__item services__image services__image--1">
               <a href="">
                 <h3 class="services__subtitle">Производство печатных плат</h3>
-                <span class="arrow">
+                <span class="services__arrow">
                   <svg width="10" height="10">
                     <use href="images/sprite.svg#arrow"></use>
                   </svg>
                 </span>
               </a>
             </li>
-            <li class="services__item image image--2">
+            <li class="services__item services__image services__image--2">
               <a href="">
                 <h3 class="services__subtitle">Монтаж печатных плат</h3>
-                <span class="arrow">
+                <span class="services__arrow">
                   <svg width="10" height="10">
                     <use href="images/sprite.svg#arrow"></use>
                   </svg>
                 </span>
               </a>
             </li>
-            <li class="services__item image image--3">
+            <li class="services__item services__image services__image--3">
               <a href="">
                 <h3 class="services__subtitle">
                   Комплектующие для светотехники
                 </h3>
-                <span class="arrow">
+                <span class="services__arrow">
                   <svg width="10" height="10">
                     <use href="images/sprite.svg#arrow"></use>
                   </svg>
@@ -173,7 +173,7 @@
         </div>
       </section>
       <div class="form">
-        <div class="container">
+        <div class="container form__container">
           <img
             src="images/airplane.png"
             alt="airplane"
@@ -183,15 +183,15 @@
           <form action="#" class="">
             <h2 class="form__title">Остались вопросы? Задайте их нам!</h2>
             <p class="form__subtitle">Мы проконсультируем Вас бесплатно</p>
-            <input class="input input--tablet" type="text" placeholder="Имя" />
+            <input class="form__input" type="text" placeholder="Имя" />
             <input
-              class="input input--tablet"
+              class="form__input"
               type="tel"
               name="tel"
               placeholder="Телефон"
             />
             <textarea
-              class="textarea"
+              class="form__textarea"
               name="question"
               cols="30"
               rows="5"
@@ -201,12 +201,12 @@
               <button type="submit" class="button form__button">
                 Задать вопрос
               </button>
-              <label class="checkbox__label" for="agree">
+              <label class="form__label" for="agree">
                 <input
                   type="checkbox"
                   name="agree"
                   id="agree"
-                  class="visually-hidden checkbox"
+                  class="visually-hidden form__checkbox"
                 />
                 <span class="form__subtitle"
                   >Я согласен на обработку персональных данных</span
@@ -218,20 +218,20 @@
       </div>
     </main>
     <footer class="footer">
-      <div class="container">
+      <div class="container footer__container">
         <div class="footer__main">
           <div class="footer__top">
             <a href="/" class="logo">
               <svg width="52" height="52">
                 <use href="images/sprite.svg#icon-brain"></use>
               </svg>
-              <div class="logo__titles">
-                <h2 class="logo__title">Service Device</h2>
+              <div class="logo__titles logo__titles--footer">
+                <h2 class="logo__title logo__title--footer">Service Device</h2>
                 <small class="logo__subtitle">умные технологии</small>
               </div>
             </a>
             <p class="footer__paragraph">1999-2018 SD Service Devices</p>
-            <ul class="social__list">
+            <ul class="social">
               <li class="social__item">
                 <a
                   href="https://facebook.com"
@@ -266,9 +266,9 @@
                   <h3 class="footer__subtitle">Разделы сайта</h3>
                   <button
                     type="button"
-                    class="button--minus"
+                    class="footer__hide"
                     data-show-list
-                    aria-label="toggle-list"
+                    aria-label="показать список"
                   ></button>
                 </div>
                 <ul class="footer__list">
@@ -291,9 +291,9 @@
                 <h3 class="footer__subtitle">Наш офис</h3>
                 <button
                   type="button"
-                  class="button--minus"
+                  class="footer__hide"
                   data-show-address
-                  aria-label="toggle-list"
+                  aria-label="показать адрес"
                 ></button>
               </div>
               <address class="footer__address">
@@ -307,7 +307,7 @@
             </div>
           </div>
         </div>
-        <div class="footer__block footer__botton">
+        <div class="footer__block footer__bottom">
           <span class="footer__link footer__link--dekstop"
             >Все права защищены</span
           >
@@ -319,40 +319,40 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop backdrop__hidden">
+    <div class="modal__backdrop modal__hidden">
       <div class="modal">
         <form action="#">
           <h2 class="form__title">Закажите звонок</h2>
           <button
-            class="button--close"
+            class="modal__close"
             type="button"
             aria-label="Close"
           ></button>
           <p class="form__subtitle">
             Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
           </p>
-          <input class="input" type="text" placeholder="Имя" />
+          <input class="form__input" type="text" placeholder="Имя" />
           <input
-            class="input"
+            class="form__input"
             type="tel"
             name="tel"
             id="tel"
             placeholder="Телефон"
           />
           <textarea
-            class="input"
+            class="form__input"
             name="question"
             cols="30"
             rows="4"
             placeholder="Ваш вопрос"
           ></textarea>
           <button type="submit" class="button form__button">Отправить</button>
-          <label class="checkbox__label" for="modal-agree">
+          <label class="form__label" for="modal-agree">
             <input
               type="checkbox"
               name="modal-agree"
               id="modal-agree"
-              class="visually-hidden checkbox"
+              class="visually-hidden form__checkbox"
             />
             <span class="form__subtitle"
               >Я согласен на обработку персональных данных</span

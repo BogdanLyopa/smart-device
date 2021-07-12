@@ -1,11 +1,44 @@
 const refs = {
   openModalBtn: document.querySelector("[data-modal-open]"),
-  closeModalBtn: document.querySelector(".button--close"),
-  modal: document.querySelector(".backdrop"),
+  closeModalBtn: document.querySelector(".modal__close"),
+  modal: document.querySelector(".modal__backdrop"),
   showListBtn: document.querySelector("[data-show-list]"),
   showAddressBtn: document.querySelector("[data-show-address]"),
   address: document.querySelector(".footer__address"),
   list: document.querySelector(".footer__list"),
+};
+const onOpenModal = () => {
+  refs.modal.classList.toggle("modal__hidden");
+  window.addEventListener("keydown", onPressEscape);
+};
+
+const onCloseModal = () => {
+  window.removeEventListener("keydown", onPressEscape);
+  refs.modal.classList.toggle("modal__hidden");
+};
+
+const onOverlayClick = (event) => {
+  if (event.currentTarget === event.target) {
+    onCloseModal();
+  }
+};
+
+const onPressEscape = (event) => {
+  if (event.code === "Escape") {
+    onCloseModal();
+  }
+};
+
+const showList = () => {
+  refs.showListBtn.classList.toggle("footer__show");
+  refs.showListBtn.classList.toggle("footer__hide");
+  refs.list.classList.toggle("visually-hidden");
+};
+
+const showAddress = () => {
+  refs.showAddressBtn.classList.toggle("footer__hide");
+  refs.showAddressBtn.classList.toggle("footer__show");
+  refs.address.classList.toggle("visually-hidden");
 };
 
 refs.openModalBtn.addEventListener("click", onOpenModal);
@@ -13,37 +46,3 @@ refs.closeModalBtn.addEventListener("click", onOpenModal);
 refs.modal.addEventListener("click", onOverlayClick);
 refs.showListBtn.addEventListener("click", showList);
 refs.showAddressBtn.addEventListener("click", showAddress);
-
-function onOpenModal() {
-  refs.modal.classList.toggle("backdrop__hidden");
-  window.addEventListener("keydown", onPressEscape);
-}
-
-function onCloseModal() {
-  window.removeEventListener("keydown", onPressEscape);
-  refs.modal.classList.toggle("backdrop__hidden");
-}
-
-function onOverlayClick(event) {
-  if (event.currentTarget === event.target) {
-    onCloseModal();
-  }
-}
-
-function onPressEscape(event) {
-  if (event.code === "Escape") {
-    onCloseModal();
-  }
-}
-
-function showList() {
-  refs.showListBtn.classList.toggle("button--plus");
-  refs.showListBtn.classList.toggle("button--minus");
-  refs.list.classList.toggle("visually-hidden");
-}
-
-function showAddress() {
-  refs.showAddressBtn.classList.toggle("button--minus");
-  refs.showAddressBtn.classList.toggle("button--plus");
-  refs.address.classList.toggle("visually-hidden");
-}

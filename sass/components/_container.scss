@@ -4,45 +4,9 @@
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
-  max-width: 1250px;
+  max-width: 1441px;
 
   @include mobile {
     min-width: 320px;
-  }
-
-  @include tablet {
-    min-width: 750px;
-  }
-
-  @include desktop {
-    max-width: 1170px;
-  }
-}
-
-.form .container {
-  @include tablet {
-    min-width: 590px;
-  }
-}
-
-.hero .container {
-  @include tablet {
-    min-width: 590px;
-  }
-
-  @include desktop {
-    max-width: 1411px;
-  }
-}
-
-.header .container {
-  @include desktop {
-    max-width: 1411px;
-  }
-}
-
-.footer .container {
-  @include desktop {
-    max-width: 1411px;
   }
 }

@@ -32,6 +32,12 @@
   }
 }
 
+.hero__container {
+  @include tablet {
+    min-width: 590px;
+  }
+}
+
 .hero__title {
   font-weight: 700;
   font-size: 40px;

@@ -9,7 +9,6 @@
 }
 
 .services__title {
-  font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
   font-size: 28px;
   color: white;
@@ -21,7 +20,7 @@
   }
 }
 
-.image {
+.services__image {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -39,43 +38,51 @@
   }
 }
 
-.image--1 {
+.services__image--1 {
   background-image: url(../images/image-1.jpg);
 }
-.image--2 {
+
+.services__image--2 {
   background-image: url(../images/image-2.jpg);
 }
-.image--3 {
+
+.services__image--3 {
   background-image: url(../images/image-3.jpg);
 }
 
 @include tablet {
-  .image {
+  .services__image {
     width: 100%;
   }
-  .image--1 {
+
+  .services__image--1 {
     background-image: url(../images/image1tablet.jpg);
   }
-  .image--2 {
+
+  .services__image--2 {
     background-image: url(../images/image2tablet.jpg);
   }
-  .image--3 {
+
+  .services__image--3 {
     background-image: url(../images/image3tablet.jpg);
   }
 }
 
 @include desktop {
-  .image {
+  .services__image {
     width: 360px;
     height: 620px;
   }
-  .image--1 {
+
+  .services__image--1 {
     background-image: url(../images/image1desktop.jpg);
   }
-  .image--2 {
+
+  .services__image--2 {
     background-image: url(../images/image2desktop.jpg);
   }
-  .image--3 {
+
+  .services__image--3 {
     background-image: url(../images/image3desktop.jpg);
   }
 }
@@ -88,12 +95,12 @@
     margin-right: 0;
   }
 
-  & img {
+  img {
     background-color: $background;
     opacity: 20%;
   }
 
-  & .arrow {
+  .services__arrow {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -127,4 +134,8 @@
   @include desktop {
     display: flex;
   }
+}
+
+.services__container {
+  max-width: 1170px;
 }

@@ -16,7 +16,7 @@
   }
 }
 
-.footer .logo__titles {
+.logo__titles--footer {
   display: inline-block;
   color: $logo-color;
   margin-left: 16px;
@@ -28,7 +28,12 @@
   }
 }
 
-.logo--footer {
-  text-align: left;
-  margin-left: 16px;
+@include tablet {
+  .logo__title--footer {
+    color: $logo-color;
+  }
+}
+
+.footer .logo {
+  display: block;
 }
