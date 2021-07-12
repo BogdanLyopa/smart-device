@@ -1,0 +1,11 @@
+.phone {
+  display: none;
+
+  @include desktop {
+    display: inline;
+    font-family: "PT Mono", "Arial", monospace;
+    color: white;
+    margin-left: 20px;
+    margin-right: 38px;
+  }
+}

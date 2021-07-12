@@ -7,38 +7,8 @@
   position: relative;
   overflow: hidden;
 }
-
-.email {
-  display: none;
-}
-
-.phone {
-  display: none;
-}
-
-@include desktop {
-  .email {
-    display: inline;
-    font-family: "PT Mono", "Arial", monospace;
-    color: white;
-    margin-left: 20px;
-    margin-right: 88px;
-  }
-
-  .phone {
-    display: inline;
-    font-family: "PT Mono", "Arial", monospace;
-    color: white;
-    margin-left: 20px;
-    margin-right: 38px;
-  }
-
-  .nav__item a {
-    display: flex;
-    align-items: center;
-  }
-
-  .header__links {
+.header__links {
+  @include desktop {
     display: flex;
     align-items: center;
   }
@@ -56,24 +26,5 @@
     outline: none;
     color: white;
     border-radius: 5px;
-  }
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 15px;
-}
-
-.nav__list {
-  display: flex;
-}
-
-.nav__item {
-  margin-right: 24px;
-
-  &:last-child {
-    margin-right: 0;
   }
 }

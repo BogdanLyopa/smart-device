@@ -21,8 +21,7 @@
   }
 
   @include desktop {
-    padding-bottom: 275px;
-    padding-top: 230px;
+    padding: 230px 0 275px 0;
 
     img {
       right: -10px;
