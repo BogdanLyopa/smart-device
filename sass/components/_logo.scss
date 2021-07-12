@@ -1,0 +1,39 @@
+.logo {
+  display: flex;
+}
+
+.logo__titles {
+  display: none;
+  color: white;
+
+  @include tablet {
+    display: block;
+    margin-left: 16px;
+
+    .logo__subtitle {
+      color: #788891;
+    }
+  }
+}
+
+.logo__titles--footer {
+  display: inline-block;
+  color: $logo-color;
+  margin-left: 16px;
+  text-align: left;
+
+  small {
+    font-size: 12px;
+    color: #788891;
+  }
+}
+
+@include tablet {
+  .logo__title--footer {
+    color: $logo-color;
+  }
+}
+
+.footer .logo {
+  display: block;
+}

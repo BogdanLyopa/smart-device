@@ -1,0 +1,101 @@
+.hero {
+  padding-bottom: 70px;
+
+  img {
+    position: absolute;
+    right: 0px;
+    top: 100px;
+  }
+
+  @include tablet {
+    padding-top: 116px;
+    padding-bottom: 163px;
+    padding-left: 60px;
+    padding-right: 60px;
+
+    img {
+      right: 0px;
+      top: 100px;
+      width: 465px;
+    }
+  }
+
+  @include desktop {
+    padding-bottom: 275px;
+    padding-top: 230px;
+
+    img {
+      right: -10px;
+      top: 220px;
+      width: 705px;
+    }
+  }
+}
+
+.hero__container {
+  @include tablet {
+    min-width: 590px;
+  }
+}
+
+.hero__title {
+  font-weight: 700;
+  font-size: 40px;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  padding-top: 230px;
+  position: relative;
+  letter-spacing: 0.07em;
+
+  @include tablet {
+    font-size: 60px;
+    width: 400px;
+    padding-top: 0;
+  }
+
+  @include desktop {
+    font-size: 80px;
+    letter-spacing: 0.07px;
+    width: 720px;
+  }
+}
+
+.hero__paragraph {
+  font-family: "PT Mono", "Arial", monospace;
+  font-weight: 400;
+  color: white;
+  margin-left: 50px;
+  position: relative;
+  line-height: 25px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 42px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: -48px;
+    bottom: 35px;
+    width: 33px;
+    height: 2px;
+    background-color: white;
+  }
+
+  @include tablet {
+    width: 350px;
+  }
+
+  @include desktop {
+    margin-left: 80px;
+    width: 680px;
+    font-size: 22px;
+
+    &::before {
+      bottom: 35px;
+      width: 66px;
+      left: -80px;
+    }
+  }
+}

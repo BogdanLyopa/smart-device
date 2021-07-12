@@ -1,0 +1,230 @@
+.footer {
+  @include desktop {
+    padding-top: 65px;
+  }
+}
+
+.footer__top {
+  text-align: center;
+  padding-top: 46px;
+  padding-bottom: 54px;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: space-between;
+    border-bottom: 1px solid $border-color;
+    padding-top: 20px;
+    padding-bottom: 24px;
+  }
+
+  @include desktop {
+    display: block;
+    border: none;
+    padding-top: 0;
+  }
+}
+
+.footer__paragraph {
+  font-family: "PT Mono", "Arial", monospace;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: $text-color;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  opacity: 50%;
+  margin-top: 26px;
+  margin-bottom: 31px;
+
+  @include tablet {
+    margin: 0;
+  }
+
+  @include desktop {
+    opacity: 0;
+    margin-top: 0;
+  }
+}
+
+.footer__title {
+  font-weight: 700;
+  font-size: 25px;
+  color: $logo-color;
+  margin: 0;
+}
+
+.footer__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__block {
+  border-top: 1px solid $border-color;
+  padding: 29px 15px;
+}
+
+@include tablet {
+  .footer__mid {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__block {
+    border: none;
+  }
+}
+
+@include desktop {
+  .footer__mid {
+    border: none;
+    margin-right: 140px;
+  }
+}
+
+.footer__list {
+  margin-top: 36px;
+
+  @include tablet {
+    margin: 0;
+  }
+}
+
+.footer__lists {
+  display: block;
+  margin-top: 10px;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $border-color;
+    font-family: "PT Mono", "Arial", monospace;
+  }
+
+  @include desktop {
+    border: none;
+
+    .footer__block {
+      padding-top: 0;
+    }
+  }
+}
+
+.footer__item {
+  color: $text-opacity;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+.footer__subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: $text-color;
+  letter-spacing: 0.05px;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  @include tablet {
+    margin-bottom: 30px;
+  }
+}
+
+.footer__address {
+  font-family: "PT Mono", "Arial", monospace;
+  font-style: normal;
+  color: $text-opacity;
+  line-height: 25px;
+  font-size: 15px;
+}
+
+.footer__address a {
+  color: inherit;
+}
+
+.footer__address p {
+  margin-top: 36px;
+  margin-bottom: 0;
+
+  @include tablet {
+    margin: 0;
+  }
+}
+
+.footer__link {
+  font-family: "PT Mono", "Arial", monospace;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 24px;
+  letter-spacing: 0.04px;
+  color: $text-opacity;
+}
+
+.footer__bottom {
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 13px;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@include desktop {
+  .footer__main {
+    display: flex;
+    border-bottom: 1px solid $border-color;
+    justify-content: space-between;
+  }
+}
+
+.footer__link--dekstop {
+  display: none;
+
+  @include desktop {
+    display: inline;
+  }
+}
+
+.footer__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__hide {
+  right: 0;
+  width: 16px;
+  height: 1px;
+  background-color: $line-color;
+  border: none;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.footer__show {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient($line-color, $line-color),
+    linear-gradient($line-color, $line-color), #fff;
+  background-position: center;
+  background-size: 100% 1px, 1px 100%;
+  background-repeat: no-repeat;
+  border: none;
+
+  @include tablet {
+    display: none;
+  }
+}

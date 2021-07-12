@@ -1,0 +1,50 @@
+.card {
+  width: 100%;
+  padding: 25px 15px 38px 27px;
+  margin-bottom: 20px;
+  border: 1px solid #ebebeb;
+  border-left: 2px solid $accent-color;
+  cursor: pointer;
+
+  svg {
+    fill: $accent-color;
+  }
+
+  &:hover {
+    background-color: $accent-color;
+  }
+
+  &:hover .card__title {
+    color: white;
+  }
+
+  &:hover .card__paragraph {
+    color: white;
+  }
+
+  &:hover svg {
+    fill: white;
+  }
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    padding: 40px 42px 49px 44px;
+  }
+}
+
+.card__title {
+  font-weight: 400;
+  font-size: 20px;
+  color: $accent-color;
+  margin-top: 14px;
+  margin-bottom: 16px;
+}
+
+.card__paragraph {
+  font-family: "PT Mono", "Arial", monospace;
+  color: $text-color;
+  font-size: 16px;
+}
